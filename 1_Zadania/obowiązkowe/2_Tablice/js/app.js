@@ -18,3 +18,14 @@ const distFromAverage = (arr) => {
 }
 
 distFromAverage([1,2,3,4,5,6,7])
+
+// Zadanie 1
+
+const fruits = ["apple", "orange","banana", "apricot", "strawberry"];
+
+console.log(fruits[0]);
+console.log(fruits[fruits.length - 1]);
+fruits.forEach(fruit => {
+    console.log(fruit);
+})
+
