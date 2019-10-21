@@ -33,4 +33,13 @@ for(let i = 0; i < fruits.length; i++){
     console.log(fruits[i]);
 }
 
+// Zadanie 3
+
+function printTable(array) {
+    for(let i = 0; i < array.length; i++){
+        console.log(array[i]);
+    }
+}
+
+printTable(["a", "b", "c", "d", "e"]);
 
