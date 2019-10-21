@@ -71,7 +71,7 @@ function getEvenAvarage(array) {
     }
 
     let evenAvg = evenSum / evenCounter;
-    
+
     if (evenCounter == 0){
         return null;
     }
@@ -83,6 +83,16 @@ function getEvenAvarage(array) {
 console.log(getEvenAvarage([1,2,3,4,5,6,7]));
 console.log(getEvenAvarage([1,1,1,1]));
 console.log(getEvenAvarage([2,8,3,7,4]));
+
+// Zadanie 6
+function sortArray(array) {
+    array.sort((a, b) => a-b);
+    console.log(array);
+    return array;
+}
+
+sortArray([145,11,3,64,4,6,10])
+
 
 
 
