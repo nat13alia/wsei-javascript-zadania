@@ -12,4 +12,3 @@ function countHello(number) {
 }
 
 countHello(5);
-
