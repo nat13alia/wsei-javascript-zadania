@@ -93,6 +93,38 @@ function sortArray(array) {
 
 sortArray([145,11,3,64,4,6,10])
 
+// Zadanie 7
+function addArrays(arr1, arr2){
+    let arrSum = [];
+    if (arr1.length > arr2.length) {
+        for(let i = 0; i < arr2.length; i++){
+            arrSum[i] = arr1[i] + arr2[i];
+        }
+
+        for(let i = arr2.length; i < arr1.length; i++){
+            arrSum[i] = arr1[i];
+        }
+    } else if (arr1.length > arr2.lengt) {
+        for(let i = 0; i < arr1.length; i++){
+            arrSum[i] = arr1[i] + arr2[i];
+        }
+    } else {
+        for(let i = 0; i < arr1.length; i++){
+            arrSum[i] = arr1[i] + arr2[i];
+        }
+
+        for(let i = arr1.length; i < arr2.length; i++){
+            arrSum[i] = arr2[i];
+        }
+    }
+    console.log(arrSum);
+    return arrSum;
+}
+
+addArrays([4,0,1,3,4], [1,9,6,7,8,17]);
+addArrays([8,3,22], [1,3,2]);
+addArrays([2,3,1,5,3,5], [3,1,76,1]);
+
 
 
 
