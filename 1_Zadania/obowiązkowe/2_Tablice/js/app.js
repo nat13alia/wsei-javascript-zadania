@@ -1,4 +1,5 @@
 // Zadanie 0
+
 const distFromAvarage = (arr) => {
     let avg = 0;
     let sum = 0;
