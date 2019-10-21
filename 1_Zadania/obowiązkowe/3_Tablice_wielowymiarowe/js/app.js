@@ -72,5 +72,24 @@ function print2DArray(arr){
 var table = [ [1, 2], [0, 4, 6, 8], [4, 5, 6, 7, 8]];
 print2DArray(table);
 
+// Zadanie 5
+
+function create2DArray(rows, columns){
+    let outerTable = [];
+    counter = 1;
+    for(let i = 0; i < rows; i++){
+        let innerTable = [];
+        for(let j = 0; j < columns; j++){
+            innerTable.push(counter);
+            counter++;
+        }
+        outerTable.push(innerTable);
+    }
+    console.log(outerTable);
+    return outerTable;
+}
+
+create2DArray(4,4)
+
 
 
