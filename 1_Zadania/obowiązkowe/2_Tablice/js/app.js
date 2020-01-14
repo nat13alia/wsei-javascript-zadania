@@ -11,7 +11,7 @@ const distFromAvarage = (arr) => {
     let newArr = [];
 
     arr.forEach(item => {
-        newArr.push(item - avg);
+        newArr.push(Math.abs(item - avg));
     });
     console.log(newArr);
     return newArr;
@@ -60,7 +60,7 @@ multiply([2,8,3,7]);
 
 // Zadanie 5
 
-function getEvenAvarage(array) {
+function getEvenAverage(array) {
     let evenSum = 0;
     let evenCounter = 0;
     for(let i = 0; i < array.length; i++){
@@ -80,9 +80,9 @@ function getEvenAvarage(array) {
     }
 }
 
-console.log(getEvenAvarage([1,2,3,4,5,6,7]));
-console.log(getEvenAvarage([1,1,1,1]));
-console.log(getEvenAvarage([2,8,3,7,4]));
+console.log(getEvenAverage([1,2,3,4,5,6,7]));
+console.log(getEvenAverage([1,1,1,1]));
+console.log(getEvenAverage([2,8,3,7,4]));
 
 // Zadanie 6
 function sortArray(array) {
@@ -104,7 +104,7 @@ function addArrays(arr1, arr2){
         for(let i = arr2.length; i < arr1.length; i++){
             arrSum[i] = arr1[i];
         }
-    } else if (arr1.length > arr2.lengt) {
+    } else if (arr1.length == arr2.lengt) {
         for(let i = 0; i < arr1.length; i++){
             arrSum[i] = arr1[i] + arr2[i];
         }
