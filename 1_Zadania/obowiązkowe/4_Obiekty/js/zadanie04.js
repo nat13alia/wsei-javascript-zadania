@@ -9,3 +9,9 @@ var movie = {
     time: "2h 58 min",
     category: " Adventure, Drama, Fantasy"
 }
+
+for (const key in movie) {
+    if (movie.hasOwnProperty(key)) {
+        console.log(key + ': ' + movie[key]);     
+    }
+}
