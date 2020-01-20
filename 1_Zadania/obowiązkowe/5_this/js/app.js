@@ -29,3 +29,23 @@ car.showReviews = function(){
 console.log(car.reviews);
 car.addNewReview('2019-02-02');
 console.log(car.showReviews());
+
+// Zadanie 3
+stairs = {
+    step: 0,
+    up: function(){
+        this.step++;
+    },
+    down: function(){
+        this.step--;
+    },
+    printStep: function(){
+        console.log(this.step);
+    },
+}
+
+stairs.up();
+stairs.up();
+stairs.up();
+stairs.down(); 
+stairs.printStep() // 2
