@@ -9,6 +9,35 @@ function callOtherFunction(nameOfFunction) {
 callOtherFunction(function (a, b) {
     console.log("Pierwsza liczba:", a);
     console.log("Druga liczba", b)
-    console.log("Wynik", a + b)
+    console.log("Wynik dodawania", a + b)
+})
+
+callOtherFunction(function (a, b) {
+    console.log("Pierwsza liczba:", a);
+    console.log("Druga liczba", b)
+    console.log("Wynik odejmowania", a - b)
+})
+
+callOtherFunction(function (a, b) {
+    console.log("Pierwsza liczba:", a);
+    console.log("Druga liczba", b)
+    console.log("Wynik mnożenia", a * b)
+})
+
+callOtherFunction(function (a, b) {
+    console.log("Pierwsza liczba:", a);
+    console.log("Druga liczba", b);
+    if(b != 0){
+        console.log("Wynik dzielenia", a + b);
+    } else {
+        console.log("Dzielenie przez 0!");
+    }
+    
+})
+
+callOtherFunction(function (a, b) {
+    console.log("Pierwsza liczba:", a);
+    console.log("Druga liczba", b)
+    console.log("Wynik potęgowania liczby 'a' do potęgi 'b'", Math.pow(a, b));
 })
 
