@@ -5,28 +5,28 @@
  */
 
 
-//Twoj komentarz ...
+// Deklaracja funkcji "jeden"
 function jeden() {
 
-    //Twoj komentarz ...
+    // Deklaracja wraz z inicjalizacją zmiennej "zmienna1" dostępnej dla funkcji "jeden" oraz każdej innej funkcji, która jest w niej zagnieżdżona
     var zmienna1 = 1;
 
-    //Twoj komentarz ...
+    //Deklaracja funkcji "dwa"
     function dwa() {
 
-        //Twoj komentarz ...
+        // Wypisanie w konsoli zmiennej "zmienna1" z poziomu funkji "dwa"
         console.log(zmienna1);
 
-        //Twoj komentarz ...
+        // Deklaracja wraz z inicjalizacją zmiennej "zmienna2"
         var zmienna2 = 3;
     }
 
-    //Twoj komentarz ...
+    // Wywołanie funkcji 2
     dwa();
 
-    //Twoj komentarz ...
+    // Wypisanie zawartości zmiennej "zmienna2" z poziomu funkcji "jeden"; ponieważ funkcja "jeden" nie ma dostępu do zmiennych lokalnych funkcji "dwa", która jest w niej zagnieżdżona, operacja ta nie powiedzie się
     console.log(zmienna2)
 }
 
-//Twoj komentarz ...
+// Wywołanie funkcji "jeden", w consoli pojawi się błąd
 jeden()
