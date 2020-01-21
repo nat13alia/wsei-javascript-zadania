@@ -88,7 +88,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function setDataDirection(elements){
         for(let i = 0; i < elements.length; i++){
             if(elements[i].dataset.direction == undefined){
-                elements[i].dataset.direction = "top";
+                // elements[i].dataset.direction == "top";
+                elements[i].setAttribute('data-direction', 'top');
             }
         }
     }
