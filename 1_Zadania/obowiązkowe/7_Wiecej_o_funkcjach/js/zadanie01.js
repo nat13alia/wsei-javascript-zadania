@@ -5,21 +5,23 @@
  * Napisz komentarze dla kazdej z linijek kodu
  */
 
-//Twoj komentarz ...
+// Deklaracja funkcji "sortArray"
 function sortArray() {
 
-    //Twoj komentarz ...
+    // Deklaracja wraz z inicjalizacją tablicy 
     var points = [41, 3, 6, 1, 114, 54, 64];
 
-    //Twoj komentarz ...
+    // Wywołanie funkcji "sort" na tablicy "points"
+    // Funkcja "sort" przyjmuje jako parametr funkcję porównującą
+    // Jeżeli funkcja porównująca nie jest podana to elementy zostaną posortowane leksykograficznie (czyli np. 41 przed 6)
     points.sort(function (a, b) {
-        //Twoj komentarz ...
+        // Zwrócenie różnicy a - b
         return a - b;
     });
 
-    //Twoj komentarz ...
-    return points;
+    // Zwrócenie posortowanej tablicy
+    return points;  
 }
 
-//Twoj komentarz ...
+// Wywołanie funkcji "sortArray"
 sortArray();
