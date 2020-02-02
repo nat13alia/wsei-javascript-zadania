@@ -1,59 +1,41 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     const form = document.querySelector('form');
-
-    const email = document.querySelector('#email').value;
-
-    const name = document.querySelector('#name').value;
-
-    const surname = document.querySelector('#surname').value;
-
-    const pass1 = document.querySelector('#pass1').value;
-
-    const pass2 = document.querySelector('#pass2').value;
-
-    const agree = document.querySelector('#agree');
+    const email = document.getElementById('email');
+    const name = document.getElementById('name');
+    const surname = document.getElementById('surname');
+    const pass1 = document.getElementById('pass1');
+    const pass2 = document.getElementById('pass2');
+    const agree = document.getElementById('agree');
 
     const errorMessage = document.querySelector('.error-message');
-
     const successMessage = document.querySelector('.success-message');
 
     form.addEventListener('submit', function(e) {
         errorMessage.innerHTML = '';
 
-        if (!checkEmail(email)) {
-            errorMessage.innerHTML += 'Email musi posiadać znak @';
-            e.preventDefault();
-            return false;
+        if (!checkEmail(email.value)) {
+            errorMessage.innerHTML += 'Email musi posiadać znak @<br>';
         }
 
-        if (!checkName(name)) {
-            errorMessage.innerHTML += 'Twoje imię jest za krótkie';
-            e.preventDefault();
-            return false;
+        if (!checkName(name.value)) {
+            errorMessage.innerHTML += 'Twoje imię jest za krótkie<br>';
         }
 
-        if (!checkName(surname)) {
-            errorMessage.innerHTML += 'Twoje nazwisko jest za krótkie';
-            e.preventDefault();
-            return false;
+        if (!checkName(surname.value)) {
+            errorMessage.innerHTML += 'Twoje nazwisko jest za krótkie<br>';
         }
 
-        if (!checkPasswords(pass1, pass2)) {
-            errorMessage.innerHTML += 'Hasła nie są takie same lub puste';
-            e.preventDefault();
-            return false;
+        if (!checkPasswords(pass1.value, pass2.value)) {
+            errorMessage.innerHTML += 'Hasła nie są takie same lub puste<br>';
         }
 
         if (!agree.checked) {
-            errorMessage.innerHTML += 'Musisz zaakceptować warunki';
-            e.preventDefault();
-            return false;
+            errorMessage.innerHTML += 'Musisz zaakceptować warunki<br>';
         }
 
         if (errorMessage.innerHTML !== '') {
             e.preventDefault();
-            return false;
         }
         
     });
@@ -75,10 +57,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function checkPasswords(pass1, pass2) {
-        if (pass1 == '' || pass2 == '') {
-            return false;
+        if (pass1.length > 0 && pass2.length > 0 && (pass1 === pass2)) {
+            return true;
         } else {
-            return pass1 == pass2;
+            return false;
         }
     }
 
